@@ -1,0 +1,120 @@
+.source-sans-3-font {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.body {
+  margin: 0;
+  width: 100%;
+  line-height: 22px;
+  font-size: 20px !important;
+}
+
+.container {
+  max-width: 1170px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+nav .container {
+  height: 100px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.navbar-dark .nav-link {
+  font-weight: bold;
+  color: white !important;
+}
+
+.nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.introduction {
+  color: rgb(44, 113, 216);
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.introduction-title {
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 18px 0;
+}
+
+.introduction-desc {
+  color: rgb(148, 148, 148);
+}
+
+img {
+  width: 100%;
+}
+
+.landing {
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.btn-primary {
+  padding: 12px 16px;
+  margin-right: 10px;
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+  color: white;
+  padding: 12px 16px;
+}
+
+.btn-primary-outline:focus {
+  background-color: rgba(248, 248, 248, 0.5);
+}
+
+.landing-block {
+  background-image: url("https://st.depositphotos.com/7595566/61529/i/450/depositphotos_615297724-stock-photo-person-hands-working-laptop-computer.jpg");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: overlay;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 767px) {
+  .phones-wrapper img {
+    height: 150px;
+    padding-bottom: 20px;
+  }
+  .left {
+    text-align: center;
+  }
+  .landing {
+    height: 90vh;
+  }
+}
+@media (max-width: 425px) {
+  .btn-primary {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .btn-primary-outline {
+    background-color: transparent;
+    border-color: #ccc;
+    color: white;
+    margin-bottom: 10px;
+  }
+}

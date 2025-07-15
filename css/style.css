@@ -28,8 +28,26 @@ nav .container {
 }
 
 .navbar-dark .nav-link {
+  position: relative;
   font-weight: bold;
   color: white !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  border-bottom: 2px dashed #3399ff;
+  transition: width 0.3s ease;
+}
+
+.navbar-dark .nav-link:focus::after {
+  width: 100%;
 }
 
 .nav-item {

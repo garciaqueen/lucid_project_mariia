@@ -6,6 +6,8 @@
     <title>Lucid</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="source-sans-3-font">
@@ -55,8 +57,7 @@
               <div class="buttons">
                 <button type="button" class="btn btn-primary">DOWNLOAD NOW</button>
                 <button type="button" class="btn btn-primary-outline">VIEW FEATURES</button>
-              </div>
-              
+              </div> 
             </div>
           </div>
           <div class="right col-md-6 d-none d-md-flex justify-content-center align-items-center">
@@ -68,5 +69,99 @@
       </div>
     </div>
   </div>
+  <div class="product-block">
+    <div class="container">
+      <div class="introduction"><span>PRODUCT OVERVIEW</span></div>
+      <div class="title"><h3>List of amazing features</h3></div>
+        <div class="slick-slider">
+          <div class="card">
+            <div><img src="img/comp.png"></div>
+            <span><h5>Responsive</h5></span>
+            <span class="desc">Maecenas eu augue sit amet est volutpat sodales. Aenean sem dui, porttitor ullamcorper risus sit amet, sagittis rutrum purus.</span>
+          </div>
+          <div class="card">
+            <div><img src="img/settings.jpg"></div>
+            <span><h5>Customizable</h5></span>
+            <span class="desc">Morbi pretium mollis nulla. Sed ligula augue, finibus eu aliquet nec, suscipit quis est. Vestibulum sodales finibus quam nec facilisis.</span>
+          </div>
+          <div class="card">
+            <div><img src="img/like.png"></div>
+            <span><h5>Lovely design</h5></span>
+            <span class="desc">Ut laoreet pharetra ligula porta vestibulum. In efficitur erat ut urna consequat, tristique ornare lorem bibendum.</span>
+          </div>
+          <div class="card">
+            <div><img src="img/phone.svg"></div>
+            <span><h5>Mobile Friendly</h5></span>
+            <span class="desc">Aenean sem dui, porttitor ullamcorper risus sit amet, sagittis rutrum purus. Pellentesque suscipit viverra tortor vitae vulputate.</span>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      function initOrDestroySlick() {
+        let $slider = $('.slick-slider');
+        let count = $slider.children().length;
+
+        if (window.innerWidth <= 992) {
+          if (!$slider.hasClass('slick-initialized')) {
+            $slider.slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              autoplay: true,
+              autoplaySpeed: 3000,
+              dots: true,
+              arrows: false,
+              centerMode: true,
+              centerPadding: '30px',
+              responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 2,
+                    centerMode: false
+                  }
+                },
+                {
+                  breakpoint: 576,
+                  settings: {
+                    slidesToShow: 1,
+                    centerMode: false
+                  }
+                }
+              ]
+            });
+          }
+          
+          $slider.css({
+            display: '',
+            justifyContent: '',
+            gap: ''
+          });
+        } else {
+          if ($slider.hasClass('slick-initialized')) {
+            $slider.slick('unslick');
+          }
+
+          $slider.css({
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '20px'
+          });
+        }
+      }
+
+      initOrDestroySlick();
+
+      $(window).on('resize', function() {
+        initOrDestroySlick();
+      });
+    });
+
+  </script>
 </body>
 </html>

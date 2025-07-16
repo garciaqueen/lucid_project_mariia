@@ -1,3 +1,5 @@
+$main-gray: rgb(148, 148, 148);
+
 .source-sans-3-font {
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
@@ -70,7 +72,7 @@ nav .container {
   color: rgb(148, 148, 148);
 }
 
-img {
+.phones-wrapper img {
   width: 100%;
 }
 
@@ -106,6 +108,61 @@ img {
   background-position: center;
 }
 
+.product-block .container .introduction {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.product-block .container {
+  margin-bottom: 70px;
+}
+
+div .title h3 {
+  font-weight: bold;
+  text-align: center !important;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 25px 20px;
+  margin: 0 10px;
+  box-sizing: border-box;
+  border: none;
+}
+
+
+.card span h5 {
+  font-weight: 400;
+}
+.desc {
+  font-size: 15px;
+  color: $main-gray;
+  text-align: center;
+}
+.card img {
+  width:  50px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.card div {
+  width: 90px;
+  height: 90px;
+  border: solid 1px $main-gray;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 20px auto;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 767px) {
   .phones-wrapper img {
     height: 150px;

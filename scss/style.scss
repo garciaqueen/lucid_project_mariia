@@ -211,6 +211,10 @@ b {
 
 .details-block:nth-child(odd) .row {
   flex-direction: row-reverse;
+
+}
+.details-block:nth-child(odd) {
+    background-color: #ececec;
 }
 @media (max-width: 767px) {
   .phones-wrapper img {

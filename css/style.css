@@ -55,6 +55,10 @@ nav .container {
   padding-right: 10px;
 }
 
+.dashes {
+  color: #3399ff;
+}
+
 .introduction {
   color: rgb(44, 113, 216);
   font-weight: bold;
@@ -73,7 +77,9 @@ nav .container {
 }
 
 .phones-wrapper img {
-  width: 100%;
+  max-width: 100%;
+  height: auto; /* maintain aspect ratio */
+  display: block;
 }
 
 .landing {
@@ -121,9 +127,17 @@ nav .container {
   margin-bottom: 70px;
 }
 
-div .title h3 {
+.title h3 {
   font-weight: bold;
+}
+
+.product-block div .title h3 {
   text-align: center !important;
+  margin-top: 10px;
+}
+
+.product-block .dashes {
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -148,6 +162,9 @@ div .title h3 {
 .desc {
   font-size: 15px;
   color: rgb(148, 148, 148);
+}
+
+.card .desc {
   text-align: center;
 }
 
@@ -171,9 +188,35 @@ div .title h3 {
   align-items: center;
 }
 
+.list div {
+  margin: 10px 0;
+}
+
+.list div img {
+  width: 20px;
+}
+
+b {
+  margin-left: 10px;
+}
+
+.details-block .container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.right .desc {
+  margin: 20px 0px;
+}
+
 @media (max-width: 767px) {
   .phones-wrapper img {
-    height: 150px;
     padding-bottom: 20px;
   }
   .left {

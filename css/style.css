@@ -215,6 +215,14 @@ b {
   margin: 20px 0px;
 }
 
+.details-block:nth-child(even) .row {
+  flex-direction: row;
+}
+
+.details-block:nth-child(odd) .row {
+  flex-direction: row-reverse;
+}
+
 @media (max-width: 767px) {
   .phones-wrapper img {
     padding-bottom: 20px;

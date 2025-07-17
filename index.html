@@ -139,15 +139,53 @@
       </div>
     </div>
   </div>
+  <div class="quality-block">
+    <div class="container">
+      <div class="top-block">
+        <div class="introduction"><span>QUALITY HAS ITS PRICE</span></div>
+        <div class="title"><h3>Pricings & Plans</h3></div>
+        <div class="dashes">— —</div>
+        <div class="price-slider">
+          <div class="comment">
+            <span class="comment-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
+            <div class="icon"><img src="img/user.webp"><div class="info"><div class="name">John</div><div class="job">CEO, West Virginia</div></div></div>
+          </div>
+          <div class="comment">
+            <span class="comment-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
+            <div class="icon"><img src="img/user.webp"><div class="info"><div class="name">Andy</div><div class="job">CEO, West Virginia</div></div></div>
+          </div>
+          <div class="comment">
+            <span class="comment-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
+            <div class="icon"><img src="img/user.webp"><div class="info"><div class="name">Viktor</div><div class="job">CEO, West Virginia</div></div></div>
+          </div>
+          <div class="comment">
+            <span class="comment-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
+            <div class="icon"><img src="img/user.webp"><div class="info"><div class="name">Anna</div><div class="job">CEO, West Virginia</div></div></div>
+          </div>
+          <div class="comment">
+            <span class="comment-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
+            <div class="icon"><img src="img/user.webp"><div class="info"><div class="name">Max</div><div class="job">CEO, West Virginia</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-block">
+    <div class="container">
+      <div class="quality-text"><h3><b>Like what you see?</b> Get this great theme now!</h3></div>
+      <div class="buttons-bottom">
+        <button type="button" class="btn btn-primary-outline">VIEW FEATURES</button>
+        <button type="button" class="btn btn-primary">DOWNLOAD NOW</button>
+      </div>
+    </div>
+  </div>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      function initOrDestroySlick() {
-        let $slider = $('.slick-slider');
-        let count = $slider.children().length;
-
+      function handleProductSlider() {
+        var $slider = $('.slick-slider');
         if (window.innerWidth <= 992) {
           if (!$slider.hasClass('slick-initialized')) {
             $slider.slick({
@@ -163,47 +201,53 @@
               responsive: [
                 {
                   breakpoint: 768,
-                  settings: {
-                    slidesToShow: 2,
-                    centerMode: false
-                  }
+                  settings: { slidesToShow: 2, centerMode: false }
                 },
                 {
                   breakpoint: 576,
-                  settings: {
-                    slidesToShow: 1,
-                    centerMode: false
-                  }
+                  settings: { slidesToShow: 1, centerMode: false }
                 }
               ]
             });
           }
-          
-          $slider.css({
-            display: '',
-            justifyContent: '',
-            gap: ''
-          });
+          $slider.css({ display: '', justifyContent: '', gap: '' });
         } else {
           if ($slider.hasClass('slick-initialized')) {
             $slider.slick('unslick');
           }
+          $slider.css({ display: 'flex', justifyContent: 'center', gap: '20px' });
+        }
+      }
 
-          $slider.css({
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '20px'
+      
+      function handlePriceSlider() {
+        var $pSlider = $('.price-slider');
+        if (!$pSlider.hasClass('slick-initialized')) {
+          $pSlider.slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: true,
+            arrows: false,
+            responsive: [
+              { breakpoint: 768, settings: { slidesToShow: 1 } }
+            ]
           });
         }
       }
 
-      initOrDestroySlick();
+      function handleAllSliders() {
+        handleProductSlider();
+        handlePriceSlider();
+      }
 
-      $(window).on('resize', function() {
-        initOrDestroySlick();
-      });
+      handleAllSliders();
+      $(window).on('resize', handleAllSliders);
     });
 
+
   </script>
+
 </body>
 </html>

@@ -327,7 +327,7 @@ b {
   text-align: center;
 }
 
-#cards-slider .card {
+.card-wrapper .card {
   width: 220px;
   margin: 0 15px;
   display: flex;
@@ -335,50 +335,50 @@ b {
   padding: 0;
   margin-bottom: 20px;
 }
-#cards-slider .card .card-header {
+.card-wrapper .card .card-header {
   background-color: white;
   font-weight: 600;
 }
-#cards-slider .card .card-top {
+.card-wrapper .card .card-top {
   padding: 10px 10px;
   border-bottom: solid 1px rgb(214, 214, 214);
   display: flex;
   flex-direction: column;
 }
-#cards-slider .card .card-top div {
+.card-wrapper .card .card-top div {
   align-self: center;
 }
-#cards-slider .card .card-body {
+.card-wrapper .card .card-body {
   text-align: center;
 }
-#cards-slider .card .card-body .card-text {
+.card-wrapper .card .card-body .card-text {
   color: rgb(136, 136, 136);
 }
-#cards-slider .card .card-body .card-text span {
+.card-wrapper .card .card-body .card-text span {
   color: #1d7fe0;
 }
-#cards-slider .card .btn-primary {
+.card-wrapper .card .btn-primary {
   background-color: white;
   border: solid 1px rgb(173, 173, 173);
   color: #1d7fe0;
   font-weight: 600;
 }
 
-#cards-slider .card:hover .card-top,
-#cards-slider .card:focus .card-top {
+.card-wrapper .card:hover .card-top,
+.card-wrapper .card:focus .card-top {
   background-color: #1d7fe0;
   color: white;
 }
-#cards-slider .card:hover .card-top .desc,
-#cards-slider .card:focus .card-top .desc {
+.card-wrapper .card:hover .card-top .desc,
+.card-wrapper .card:focus .card-top .desc {
   color: white;
 }
-#cards-slider .card:hover .card-header,
-#cards-slider .card:focus .card-header {
+.card-wrapper .card:hover .card-header,
+.card-wrapper .card:focus .card-header {
   color: #1d7fe0;
 }
-#cards-slider .card:hover .btn-primary,
-#cards-slider .card:focus .btn-primary {
+.card-wrapper .card:hover .btn-primary,
+.card-wrapper .card:focus .btn-primary {
   background-color: #1d7fe0;
   color: white;
 }
@@ -444,6 +444,27 @@ b {
   font-weight: 600;
 }
 
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-wrapper .card {
+  flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+}
+
+@media (max-width: 1005px) {
+  .card-wrapper .card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+  }
+}
+@media (max-width: 756px) {
+  .card-wrapper .card {
+    flex: 1 1 100%; /* 1 card per row */
+  }
+}
 @media (min-width: 769px) {
   .contact-block {
     padding-bottom: 300px;
@@ -533,7 +554,7 @@ b {
   }
 }
 @media (min-width: 1096px) {
-  #cards-slider {
+  .card-wrapper .card-wrapper {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

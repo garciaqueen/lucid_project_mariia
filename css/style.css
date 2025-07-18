@@ -328,11 +328,12 @@ b {
 }
 
 #cards-slider .card {
-  width: 300px;
+  width: 220px;
   margin: 0 15px;
   display: flex;
   flex-direction: column;
   padding: 0;
+  margin-bottom: 20px;
 }
 #cards-slider .card .card-header {
   background-color: white;
@@ -387,6 +388,107 @@ b {
   font-size: 50px;
 }
 
+.contact-block {
+  background-color: #ececec;
+  text-align: center;
+}
+.contact-block .container {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.contact-block .container .contact-block-wrapper .introduction,
+.contact-block .container .contact-block-wrapper .title,
+.contact-block .container .contact-block-wrapper .dashes {
+  text-align: center;
+}
+.contact-block .col-sm-4 img {
+  width: 50px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+.contact-block .desc div a {
+  color: rgb(148, 148, 148);
+  text-decoration: none;
+}
+
+@media (min-width: 769px) {
+  .contact-block {
+    padding-bottom: 300px;
+  }
+  .contact-form {
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    height: 360px;
+    background-color: rgb(32, 31, 36);
+    padding: 40px 40px;
+  }
+  .contact-form input, .contact-form textarea {
+    padding: 10px 15px;
+    background-color: rgb(39, 38, 43);
+    border-color: black;
+    margin: 10px 0px;
+    color: white;
+  }
+  .contact-form textarea {
+    height: 100%;
+    width: 100%;
+  }
+  .contact-form .btn-primary {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-self: end;
+    font-weight: 600;
+  }
+  .contact-wrapper {
+    position: relative;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    height: 360px;
+    background-color: rgb(32, 31, 36);
+    padding: 40px 40px;
+  }
+  .contact-form input, .contact-form textarea {
+    padding: 10px 15px;
+    background-color: rgb(39, 38, 43);
+    border-color: black;
+    margin: 10px 0px;
+    color: white;
+  }
+  .contact-form textarea {
+    height: 100%;
+    width: 100%;
+  }
+  .contact-form .btn-primary {
+    margin-top: 20px;
+    display: flex;
+    justify-self: end;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .contact-wrapper {
+    position: static;
+  }
+}
+@media (max-width: 576px) {
+  .contact-form {
+    height: 400px;
+  }
+  .btn-primary {
+    justify-self: center !important;
+  }
+}
 @media (max-width: 970px) {
   .bottom-block .container {
     display: flex;
@@ -402,14 +504,10 @@ b {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; /* spacing between cards */
-  }
-  #cards-slider .card {
-    width: 250px;
-    margin: 0; /* remove auto margin for flex to work */
+    gap: 30px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .phones-wrapper img {
     padding-bottom: 20px;
   }

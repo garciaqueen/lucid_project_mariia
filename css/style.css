@@ -153,41 +153,36 @@ nav .container {
   margin: 0 10px;
   box-sizing: border-box;
   border: none;
-  span h5 {
-    font-weight: 400;
-  }
-  .desc {
-    text-align: center;
-  }
-  img {
-    width: 50px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  div {
-    width: 90px;
-    height: 90px;
-    border: solid 1px rgb(148, 148, 148);
-    border-radius: 50%;
-    box-sizing: border-box;
-    margin: 20px auto;
-    margin-bottom: 30px;
-    margin-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
-
-
+#my-slider .card span h5 {
+  font-weight: 400;
+}
+#my-slider .card .desc {
+  text-align: center;
+}
+#my-slider .card img {
+  width: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#my-slider .card div {
+  width: 90px;
+  height: 90px;
+  border: solid 1px rgb(148, 148, 148);
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 20px auto;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .desc {
   font-size: 15px;
   color: rgb(148, 148, 148);
 }
-
-
 
 .list div {
   margin: 10px 0;
@@ -212,6 +207,7 @@ b {
   align-items: start;
   justify-content: center;
 }
+
 .right .desc {
   margin: 20px 0px;
 }
@@ -237,6 +233,7 @@ b {
   background-size: cover;
   background-position: center;
 }
+
 .quality-block .container {
   padding: 30px 10px;
 }
@@ -244,10 +241,12 @@ b {
 .top-block .introduction {
   text-align: center;
 }
+
 .top-block .title {
   color: white;
   text-align: center;
 }
+
 .top-block .dashes {
   text-align: center;
 }
@@ -256,19 +255,23 @@ b {
   margin: 20px 20px;
   padding-bottom: 20px;
 }
+
 .comment img {
   width: 100px;
   height: 60px;
 }
+
 .comment .icon {
   display: flex;
   flex-direction: row;
   padding: 20px 0px;
 }
+
 .comment .icon .info {
   flex-direction: column;
   color: white;
 }
+
 .comment .icon .info .job {
   font-weight: bold;
 }
@@ -283,6 +286,7 @@ b {
   background-color: rgb(28, 28, 29);
   width: 100%;
 }
+
 .bottom-block .container {
   display: flex;
   flex-direction: row;
@@ -290,12 +294,15 @@ b {
   justify-content: space-between;
   padding: 30px 0px;
 }
+
 .bottom-block .container .quality-text {
   color: white;
 }
+
 .bottom-block .container .quality-text b {
   font-weight: 700;
 }
+
 .bottom-block .container .btn {
   margin: 0px 8px;
 }
@@ -306,17 +313,75 @@ b {
   overflow: hidden;
 }
 
-/* .price-block .container {
+.price-block .container {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.price-block .container .introduction {
+  text-align: center;
+}
+.price-block .container .title {
+  text-align: center;
+}
+.price-block .container .dashes {
+  text-align: center;
+}
+
+#cards-slider .card {
+  width: 300px;
+  margin: 0 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 0px;
-} */
-#cards-slider .card {
-  width: auto;
-  margin: 0 auto;
+  padding: 0;
 }
+#cards-slider .card .card-header {
+  background-color: white;
+  font-weight: 600;
+}
+#cards-slider .card .card-top {
+  padding: 10px 10px;
+  border-bottom: solid 1px rgb(214, 214, 214);
+  display: flex;
+  flex-direction: column;
+}
+#cards-slider .card .card-top div {
+  align-self: center;
+}
+#cards-slider .card .card-body {
+  text-align: center;
+}
+#cards-slider .card .card-body .card-text {
+  color: rgb(136, 136, 136);
+}
+#cards-slider .card .card-body .card-text span {
+  color: #1d7fe0;
+}
+#cards-slider .card .btn-primary {
+  background-color: white;
+  border: solid 1px rgb(173, 173, 173);
+  color: #1d7fe0;
+  font-weight: 600;
+}
+
+#cards-slider .card:hover .card-top,
+#cards-slider .card:focus .card-top {
+  background-color: #1d7fe0;
+  color: white;
+}
+#cards-slider .card:hover .card-top .desc,
+#cards-slider .card:focus .card-top .desc {
+  color: white;
+}
+#cards-slider .card:hover .card-header,
+#cards-slider .card:focus .card-header {
+  color: #1d7fe0;
+}
+#cards-slider .card:hover .btn-primary,
+#cards-slider .card:focus .btn-primary {
+  background-color: #1d7fe0;
+  color: white;
+}
+
 .number {
   font-weight: 400;
   font-size: 50px;
@@ -330,6 +395,18 @@ b {
     justify-content: space-between;
     padding: 30px 0px;
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 1096px) {
+  #cards-slider {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* spacing between cards */
+  }
+  #cards-slider .card {
+    width: 250px;
+    margin: 0; /* remove auto margin for flex to work */
   }
 }
 @media (max-width: 767px) {

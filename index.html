@@ -203,7 +203,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card’s content.
+                Some quick example text to build on the card <span>title</span> and make up the bulk of the card’s content.
               </p>
               <a href="#" class="btn btn-primary">ORDER NOW</a>
             </div>
@@ -213,12 +213,12 @@
               PERSONAL
             </div>
             <div class="card-top">
-              <div>$<span class="number">0</span></div>
+              <div>$<span class="number">25</span></div>
               <div class="desc">/per month</div>
             </div>
             <div class="card-body">
               <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card’s content.
+                Some quick example text to build on the card <span>title</span> and make up the bulk of the card’s content.
               </p>
               <a href="#" class="btn btn-primary">ORDER NOW</a>
             </div>
@@ -228,12 +228,12 @@
               BUSINESS
             </div>
             <div class="card-top">
-              <div>$<span class="number">0</span></div>
+              <div>$<span class="number">50</span></div>
               <div class="desc">/per month</div>
             </div>
             <div class="card-body">
               <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card’s content.
+                Some quick example text to build on the card <span>title</span> and make up the bulk of the card’s content.
               </p>
               <a href="#" class="btn btn-primary">ORDER NOW</a>
             </div>
@@ -243,12 +243,12 @@
               ULTIMATE
             </div>
             <div class="card-top">
-              <div>$<span class="number">0</span></div>
+              <div>$<span class="number">99</span></div>
               <div class="desc">/per month</div>
             </div>
             <div class="card-body">
               <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card’s content.
+                Some quick example text to build on the card <span>title</span> and make up the bulk of the card’s content.
               </p>
               <a href="#" class="btn btn-primary">ORDER NOW</a>
             </div>
@@ -322,26 +322,29 @@
       function initSlider() {
         const $slider = $('#cards-slider');
 
-        if (window.innerWidth < 992) {
+        if (window.innerWidth < 1096) {
           if (!$slider.hasClass('slick-initialized')) {
             $slider.slick({
               slidesToShow: 3,
+              centerMode: true,
               slidesToScroll: 1,
-              autoplay: true,
-              autoplaySpeed: 3000,
+              autoplay: false,
               dots: true,
               arrows: false,
+              infinite: false,
               responsive: [
                 {
                   breakpoint: 768,
                   settings: {
                     slidesToShow: 2,
+                    centerMode: true,
                   }
                 },
                 {
                   breakpoint: 570,
                   settings: {
                     slidesToShow: 1,
+                    centerMode: true,
                   }
                 }
               ]

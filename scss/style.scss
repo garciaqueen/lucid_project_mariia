@@ -1,25 +1,27 @@
-$main-gray: rgb(148, 148, 148);
-
 .source-sans-3-font {
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
+
 .body {
   margin: 0;
   width: 100%;
   line-height: 22px;
   font-size: 20px !important;
 }
+
 .container {
   max-width: 1170px !important;
   padding-left: 15px !important;
   padding-right: 15px !important;
 }
+
 nav .container {
   height: 100px;
 }
+
 .navbar-brand {
   font-weight: bold;
   font-size: 24px;
@@ -43,7 +45,6 @@ nav .container {
   border-bottom: 2px dashed #3399ff;
   transition: width 0.3s ease;
 }
-
 
 .navbar-dark .nav-link:focus::after {
   width: 100%;
@@ -85,14 +86,17 @@ nav .container {
   display: flex;
   align-items: center;
 }
+
 .buttons {
   padding-top: 20px;
   padding-bottom: 40px;
 }
+
 .btn-primary {
   padding: 12px 16px;
   margin-right: 10px;
 }
+
 .btn-primary-outline {
   background-color: transparent;
   border-color: #ccc;
@@ -103,6 +107,7 @@ nav .container {
 .btn-primary-outline:focus {
   background-color: rgba(248, 248, 248, 0.5);
 }
+
 .landing-block {
   background-image: url("https://st.depositphotos.com/7595566/61529/i/450/depositphotos_615297724-stock-photo-person-hands-working-laptop-computer.jpg");
   background-color: rgba(0, 0, 0, 0.7);
@@ -122,21 +127,22 @@ nav .container {
   margin-bottom: 70px;
 }
 
-
 .title h3 {
   font-weight: bold;
 }
+
 .product-block div .title h3 {
   text-align: center !important;
   margin-top: 10px;
 }
+
 .product-block .dashes {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 20px;
-  
 }
-.card {
+
+#my-slider .card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,63 +153,67 @@ nav .container {
   margin: 0 10px;
   box-sizing: border-box;
   border: none;
+  span h5 {
+    font-weight: 400;
+  }
+  .desc {
+    text-align: center;
+  }
+  img {
+    width: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  div {
+    width: 90px;
+    height: 90px;
+    border: solid 1px rgb(148, 148, 148);
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin: 20px auto;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 
-.card span h5 {
-  font-weight: 400;
-}
+
 .desc {
   font-size: 15px;
-  color: $main-gray;
+  color: rgb(148, 148, 148);
 }
 
-.card .desc {
-  text-align: center;
-}
-.card img {
-  width:  50px;
-  padding: 10px;
-  box-sizing: border-box;
-}
-.card div {
-  width: 90px;
-  height: 90px;
-  border: solid 1px $main-gray;
-  border-radius: 50%;
-  box-sizing: border-box;
-  margin: 20px auto;
-  margin-bottom: 30px;
-  margin-top: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .list div {
   margin: 10px 0;
 }
+
 .list div img {
   width: 20px;
 }
+
 b {
   margin-left: 10px;
 }
 
 .details-block .container {
- padding-top: 30px;
- padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-
 
 .right {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  .desc {
-    margin: 20px 0px;;
-  }
+}
+.right .desc {
+  margin: 20px 0px;
 }
 
 .details-block:nth-child(even) .row {
@@ -212,154 +222,227 @@ b {
 
 .details-block:nth-child(odd) .row {
   flex-direction: row-reverse;
+}
 
-}
 .details-block:nth-child(odd) {
-    background-color: #ececec;
+  background-color: #ececec;
 }
+
 .quality-block {
- background-image: url("https://res.cloudinary.com/momentum-media-group-pty-ltd/image/upload/s--PqSJfjDH--/c_fill%2Cf_webp%2Cg_center%2Ch_480%2Cw_855/v1/Money%20Management/financial-portfolio-advisers-mm_h4i2xi.jpg?itok=7hyELIoG");
- background-color: rgba(0, 0, 0, 0.7);
- background-blend-mode: overlay;
- width: 100%;
- background-repeat: no-repeat;
- background-size: cover;
- background-position: center;
- .container {
-   padding: 30px 10px;
- }
+  background-image: url("https://res.cloudinary.com/momentum-media-group-pty-ltd/image/upload/s--PqSJfjDH--/c_fill%2Cf_webp%2Cg_center%2Ch_480%2Cw_855/v1/Money%20Management/financial-portfolio-advisers-mm_h4i2xi.jpg?itok=7hyELIoG");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: overlay;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-.top-block {
- .introduction {
-   text-align: center;
- }
- .title {
-   color: white;
-   text-align: center;
- }
- .dashes {
-   text-align: center;
- }
+.quality-block .container {
+  padding: 30px 10px;
 }
+
+.top-block .introduction {
+  text-align: center;
+}
+.top-block .title {
+  color: white;
+  text-align: center;
+}
+.top-block .dashes {
+  text-align: center;
+}
+
 .comment {
- margin: 20px 20px;
- padding-bottom: 20px;
- img {
-   width: 100px;
-   height: 60px;
- }
- .icon {
-   display: flex;
-   flex-direction: row;
-   padding: 20px 0px;
-   .info {
-     flex-direction: column;
-     color: white;
-     .job {
-       font-weight: bold;
-     }
-   }
- }
+  margin: 20px 20px;
+  padding-bottom: 20px;
 }
+.comment img {
+  width: 100px;
+  height: 60px;
+}
+.comment .icon {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px;
+}
+.comment .icon .info {
+  flex-direction: column;
+  color: white;
+}
+.comment .icon .info .job {
+  font-weight: bold;
+}
+
 .comment-text {
- font-style: italic;
- font-size: 17px;
- color: white;
+  font-style: italic;
+  font-size: 17px;
+  color: white;
 }
 
 .bottom-block {
- background-color: rgb(28, 28, 29);
- width: 100%;
- .container {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
-   padding: 30px 0px;
-   .quality-text {
-     color: white;
-     b {
-       font-weight: 700;
-     }
-   }
-   .btn {
-     margin: 0px 8px;
-   }
- }
- }
+  background-color: rgb(28, 28, 29);
+  width: 100%;
+}
+.bottom-block .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+.bottom-block .container .quality-text {
+  color: white;
+}
+.bottom-block .container .quality-text b {
+  font-weight: 700;
+}
+.bottom-block .container .btn {
+  margin: 0px 8px;
+}
 
 /* Swiper container */
 #price-slider {
   width: 100%;
   overflow: hidden;
+
+  
 }
 
-/* This gives you exactly 2 slides per row (50% each) */
-.swiper-slide {
-  flex: 0 0 50%;  /* Do NOT use width here */
-  max-width: 50%;
-  box-sizing: border-box;
-}
+.price-block .container {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  .introduction {
+    text-align: center;
+  }
+  .title {
+    text-align: center;
+  }
 
-/* For mobile, show only one */
-@media (max-width: 700px) {
-  .swiper-slide {
-    flex: 0 0 100%;
-    max-width: 100%;
+  .dashes {
+    text-align: center;
+  }
+}
+#cards-slider .card {
+  width: 300px;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  .card-header {
+    background-color: white;
+    font-weight: 600;
+  }
+  .card-top {
+    padding: 10px 10px;
+    border-bottom: solid 1px rgb(214, 214, 214);
+    display: flex;
+    flex-direction: column;
+    div {      
+      align-self: center;
+    }
+    }
+    .card-body {
+      .card-text {
+        color: rgb(136, 136, 136);
+        span {
+          color: #1d7fe0;
+        }
+      }
+      text-align: center;
+    }
+  .btn-primary {
+    background-color: white;
+    border: solid 1px rgb(173, 173, 173);
+    color: #1d7fe0;
+    font-weight: 600;
+  }
+}
+#cards-slider .card:hover,
+#cards-slider .card:focus {
+  .card-top {
+      background-color: #1d7fe0;
+      color: white;
+      .desc {
+        color: white;
+      }
+  }
+  .card-header {
+    color: #1d7fe0;
+  }
+  .btn-primary {
+    background-color: #1d7fe0;
+    color: white;
   }
 }
 
 
+.number {
+  font-weight: 400;
+  font-size: 50px;
+}
+
+
 @media (max-width: 970px) {
- .bottom-block .container{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-between;
-   padding: 30px 0px;
-   flex-wrap: wrap;
- }
+  .bottom-block .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px;
+    flex-wrap: wrap;
+  }
 }
+
+@media (min-width: 1096px) {
+  #cards-slider {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* spacing between cards */
+  }
+
+  #cards-slider .card {
+    width: 250px;
+    margin: 0; /* remove auto margin for flex to work */
+  }
+}
+
+
 @media (max-width: 767px) {
- .phones-wrapper img {
-   padding-bottom: 20px;
- }
- .left {
-   text-align: center;
- }
- .landing {
-   height: 90vh;
- }
+  .phones-wrapper img {
+    padding-bottom: 20px;
+  }
+  .left {
+    text-align: center;
+  }
+  .landing {
+    height: 90vh;
+  }
 }
-
 @media (max-width: 425px) {
- .bottom-block .container .btn {
-   margin: 0 4px;
- }
- .btn-primary {
-   margin-right: 0;
-   margin-bottom: 10px;
-  
- }
-.btn-primary-outline {
-   background-color: transparent;
-   border-color: #ccc;
-   color: white;
-   margin-bottom: 10px;
- }
-
+  .bottom-block .container .btn {
+    margin: 0 4px;
+  }
+  .btn-primary {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .btn-primary-outline {
+    background-color: transparent;
+    border-color: #ccc;
+    color: white;
+    margin-bottom: 10px;
+  }
 }
-
 @media (max-width: 380px) {
- .quality-text h3 {
-     font-size: 18px;
-   }
-   .bottom-block .container .btn {
-     margin: 0;
-   }
-
-   .btn {
-     font-size: 13px;
-     padding: 6px 12px;
-   }
+  .quality-text h3 {
+    font-size: 18px;
+  }
+  .bottom-block .container .btn {
+    margin: 0;
+  }
+  .btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
 }

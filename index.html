@@ -27,19 +27,19 @@
                   <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="#features">Features</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Testimonials</a>
+                  <a class="nav-link" href="#testimonials">Testimonials</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link" href="#pricing">Pricing</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#contacts">Contact</a>
                 </li>
               </ul>
             </div>
@@ -70,7 +70,7 @@
       </div>
     </div>
   </div>
-  <div class="product-block">
+  <div class="product-block" id="features">
     <div class="container">
       <div class="introduction"><span>PRODUCT OVERVIEW</span></div>
       <div class="title"><h3>List of amazing features</h3></div>
@@ -108,7 +108,7 @@
     </div>
   </div>
   <hr>
-  <div class="details-block">
+  <div class="details-block" id="about">
     <div class="container">
       <div class="row">
         <div class="left col-12 col-md-6">
@@ -131,7 +131,7 @@
       </div>
     </div>
   </div>
-  <div class="details-block">
+  <div class="details-block" id="testimonials">
     <div class="container">
       <div class="row">
         <div class="left col-12 col-md-6">
@@ -188,7 +188,7 @@
       </div>
     </div>
   </div>
-  <div class="price-block">
+  <div class="price-block" id="pricing">
     <div class="container">
       <div class="introduction"><span>QUALITY HAS ITS PRICE</span></div>
       <div class="title"><h3>Pricings & Plans</h3></div>
@@ -258,7 +258,7 @@
     </div>
   </div>
   <div class="contact-wrapper">
-    <div class="contact-block">
+    <div class="contact-block" id="contacts">
       <div class="container">
         <div class="contact-block-wrapper">
           <div class="introduction"><span>STAY IN TOUCH</span></div>
@@ -288,15 +288,16 @@
           <div class="form-window">
             <div class="row">
               <div class="left col-12 col-sm-6">
-                <input type="text" class="form-control" id="name" placeholder="Name*">
-                <input type="email" class="form-control" id="email" placeholder="Email*">
-                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                <input type="text" class="form-control" id="name" placeholder="Name*" required>
+                <input type="email" class="form-control" id="email" placeholder="Email*" required>
+                <input type="text" class="form-control" id="subject" placeholder="Subject" required>
               </div>
               <div class="right col-12 col-sm-6">
                 <textarea placeholder="Message*"></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+            <div id="confirmation" style="display: none; color: white; margin-top: 10px;">Message sent!</div>
           </div>
         </form>
       </div>
@@ -304,12 +305,45 @@
     
     <div id="map" style="height: 400px;"></div>
   </div>
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inside">
+        <div class="images">
+          <a href="#"><img src="img/icon.png"></a>
+          <a href="#"><img src="img/ball.png"></a>
+          <a href="#"><img src="img/twitter.png"></a>
+          <a href="#"><img src="img/facebook.png"></a>
+          <a href="#"><img src="img/linked.webp"></a>
+          </div>
+        <div class="copyright">COPYRIGHT © 2014 LUCID ONEPAGE THEME</div>
+      </div>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script src="js/slider.js"></script>
   <script src="js/map.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contactForm");
+      const button = form.querySelector("button");
+      const confirmation = document.getElementById("confirmation");
+
+      button.addEventListener("click", function (event) {
+        event.preventDefault(); // prevent actual submission
+        form.reset(); // clear the fields
+        confirmation.style.display = "block"; // show message
+
+        // Hide it again after 3 seconds (optional)
+        setTimeout(() => {
+          confirmation.style.display = "none";
+        }, 3000);
+      });
+    });
+  </script>
 
 
 </body>

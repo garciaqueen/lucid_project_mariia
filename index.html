@@ -283,7 +283,7 @@
     </div>
     <div class="contact-form">
       <div class="my-container">
-        <form>
+        <form onsubmit="sendMessage(event)">
           <div class="form-window">
             <div class="row">
               <div class="left col-12 col-sm-6">
@@ -292,11 +292,11 @@
                 <input type="text" class="form-control" id="subject" placeholder="Subject" required>
               </div>
               <div class="right col-12 col-sm-6">
-                <textarea placeholder="Message*"></textarea>
+                <textarea placeholder="Message*" required></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
-            <div id="confirmation" style="display: none; color: white; margin-top: 10px;">Message sent!</div>
+            <div id="confirmation" style="display: none; color: #00d4ff; background: rgba(0, 212, 255, 0.1); padding: 10px; border-radius: 5px; margin-top: 10px; border: 1px solid #00d4ff;">Message sent successfully!</div>
           </div>
         </form>
       </div>
@@ -326,22 +326,25 @@
   <script src="js/map.js"></script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contactForm");
-      const button = form.querySelector("button");
-      const confirmation = document.getElementById("confirmation");
+    const navLinks = document.querySelectorAll('.nav-link');
 
-      button.addEventListener("click", function (event) {
-        event.preventDefault(); // prevent actual submission
-        form.reset(); // clear the fields
-        confirmation.style.display = "block"; // show message
-
-        // Hide it again after 3 seconds (optional)
-        setTimeout(() => {
-          confirmation.style.display = "none";
-        }, 3000);
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        navLinks.forEach(nav => nav.classList.remove('active', 'active'));
+        e.currentTarget.classList.add('active');
       });
     });
+  </script>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      document.getElementById('confirmation').style.display = 'block';
+      document.querySelector('form').reset();
+      setTimeout(() => {
+        document.getElementById('confirmation').style.display = 'none';
+      }, 3000);
+    }
   </script>
 
 
